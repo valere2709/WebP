@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" content="width=device-width, initial-scale=1">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<title>원길</title>
+	</head>
+	<body>
+		<div class="title">
+			<img src="image/logo.jpg" alt="rogo">
+			<div class="logo">창의공과대학 강의실 찾기</div>
+		</div>
+		
+		<form id="search-box">
+			<input type="text" id="searchbar" placeholder="검색어를 입력하세요..." autofocus>
+			<ul id="suggestions"></ul>
+		</form>
+
+		<script>
+			// 미리 준비된 데이터셋
+			var data = ["강의실", "교수", "과목", "시간표", "학과", "학생회", "학식", "도서관", "산책로", "행사"];
+				
+			var searchInput = document.getElementById("search-input");
+			var suggestions = document.getElementById("suggestions");
+
+			// 검색어 입력 시
+			searchbar.addEventListener("keyup", function() {
+			  var inputValue = searchbar.value;
+			  var matches = [];
+			  if (inputValue.length > 0) {
+				matches = data.filter(function(word) {
+				  return word.startsWith(inputValue);
+				});
+			  }
+			  displayMatches(matches);
+			}); 
+
+			// 연관 검색어 표시
+			function displayMatches(matches) {
+			  if (matches.length > 0) {
+				var html = "";
+				for (var i = 0; i < matches.length; i++) {
+				  html += "<li>" + matches[i] + "</li>";
+				}
+				suggestions.innerHTML = html;
+				} else {
+				suggestions.innerHTML = "";
+				}
+			}
+			
+			function search() {
+				let query = $('input').val().trim();
+				console.log('query: ' + query);
+				window.location.href = 'result'+query+'.html';
+			}
+			$('#searchbar').keydown(function (e) {
+			  if (e.keyCode === 13) {
+				e.preventDefault();
+				search();
+			  }
+			});
+		</script>
+	</body>
+</html>
