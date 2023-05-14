@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Neural Network</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* 추가된 스타일 */
+    .content-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+	footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="page-title">Neural Network</div>
+  <div class="container">
+    <div class="content-container">
+      <h2>What is Neural Network?</h2>
+      <p>Neural Network is a biologically inspired artificial neural network that mimics the working principles of neurons in the brain.</p>
+      <p>It is composed of input, hidden, and output layers, and each layer consists of multiple neurons.</p>
+      <p>In the input layer, external information is received, and in the hidden layer, the input information is processed.</p>
+      <p>In the output layer, the final result is output, and this result is adjusted through learning.</p>
+      <p>For more information, please check out the <a href="about.html">About page</a>.</p>
+
+      <h2>Neural Network Example</h2>
+      <p>Press the button below to train a neural network.</p>
+      <button id="startTrainingButton" class="button">Start Training</button>
+
+      <h2>Neural Network Structure</h2>
+      <p>The structure of a neural network can vary depending on its purpose, but the basic structure consists of input, hidden, and output layers.</p>
+      <p>The number of neurons in each layer can also vary depending on the complexity of the problem being solved.</p>
+      <p>For more information on the structure of a neural network, please visit the <a href="https://en.wikipedia.org/wiki/Artificial_neural_network#Structure">Wikipedia page</a>.</p>
+
+      <h2>Neural Network Training</h2>
+      <p>Neural network training involves adjusting the weights and biases of the neurons to minimize the error between the predicted output and the actual output.</p>
+      <p>The most common training method is backpropagation, which involves propagating the error backwards through the network and adjusting the weights and biases accordingly.</p>
+      <p>For more information on neural network training, please visit the <a href="https://en.wikipedia.org/wiki/Backpropagation">Wikipedia page</a>.</p>
+
+      <h2>Neural Network Applications</h2>
+      <p>Neural networks are widely used in various fields such as image recognition, natural language processing, speech recognition, and recommendation systems.</p>
+      <img src="images/neural_network_image_1.png" alt="Neural Network Image 1">
+      <p>For more information on neural network applications, please visit the <a href="https://en.wikipedia.org/wiki/Artificial_neural_network#Applications">Wikipedia page</a>.</p>
+      <img src="images/neural_network_image_2.png" alt="Neural Network Image 2">
+	  <div class="author-info">
+        <p>Website created by:</p>
+        <p>인공지능융학과 20202847 김진용</p>
+      </div>
+
+      <div class="additional-info">
+        <h2>About the Author</h2>
+        <p>인공지능융학과 20202847 김진용은 인공지능 분야에 대한 관심과 지식을 바탕으로 이 웹사이트를 개발하였습니다. 이 홈페이지는 다양한 사용자들에게 신경망에 대한 정보를 제공하기 위해 만들어졌습니다.</p>
+      </div>
+    </div>
+  </div>
+  <!-- 바닥글 -->
+  <footer>
+    <p>Website created by 인공지능융학과 20202847 김진용</p>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var startTrainingButton = document.getElementById("startTrainingButton");
+      startTrainingButton.addEventListener("click", function() {
+        alert("Training started!");
+      });
+    });
+  </script>
+</body>
+</html>
+

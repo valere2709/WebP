@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="menu">
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="contact.html">Contact</a>
+	</div>
+	<div class="page-title">Contact Us</div>
+	<div class="content-container">
+		<h2>Contact Us</h2>
+		<p>For any inquiries or feedback, please feel free to contact us using the form below.</p>
+		<form id="contactForm" action="#" method="POST">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="message">Message:</label>
+			<textarea id="message" name="message" required></textarea>
+
+			 <button type="submit" class="button">Send</button>
+		</form>
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			var contactForm = document.getElementById("contactForm");
+			contactForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+
+				var nameInput = document.getElementById("name");
+				var emailInput = document.getElementById("email");
+				var messageInput = document.getElementById("message");
+
+				if (nameInput.value.trim() === "" || emailInput.value.trim() === "" || messageInput.value.trim() === "") {
+					alert("Please fill in all fields.");
+					return;
+				}
+
+				alert("Form submitted!\nName: " + nameInput.value + "\nEmail: " + emailInput.value + "\nMessage: " + messageInput.value);
+				contactForm.reset();
+			});
+		});
+	</script>
+</body>
+</html>
