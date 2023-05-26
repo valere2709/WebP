@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<title>4층 이미지</title>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			font-family: 'Arial', sans-serif;
+		}
+		
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		
+		.container img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+
+		.navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: #4CAF50;
+			padding: 10px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			font-weight: bold;
+			font-size: 18px;
+		}
+
+		.btn-home {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			padding: 10px 20px;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			color: #fff;
+			font-weight: bold;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<span>창의공과대학 강의실 찾기</span>
+	</div>
+
+	<div class="container">
+		<img src="Gmail/4.png" alt="4층 이미지">
+	</div>
+
+	<button class="btn-home" onclick="goHome()">홈으로</button>
+
+	<script>
+		function goHome() {
+			window.location.href = 'index.html';
+		}
+	</script>
+</body>
+</html>
